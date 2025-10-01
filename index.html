@@ -30,21 +30,21 @@
 
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-pink-100 px-4 md:px-6 py-3 sticky top-0 z-50 shadow-md">
+    <nav class="bg-white px-4 md:px-6 py-3 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto">
             <div class="grid grid-cols-3 items-center gap-4 nav-list">
                 <!-- Left: Menu Items -->
                 <div
                     class="hidden md:flex space-x-4 lg:space-x-6 text-sm lg:text-md font-semibold uppercase justify-start">
-                    <a href="#about" class="hover:text-pink-500 transition">About</a>
-                    <a href="#menu" class="hover:text-pink-500 transition">Menu</a>
-                    <a href="#find-us" class="hover:text-pink-500 transition">Find Us</a>
-                    <a href="#events" class="hover:text-pink-500 transition">Events</a>
+                    <a href="#about" class="hover:text-gray-500 transition">About</a>
+                    <a href="#menu" class="hover:text-gray-500 transition">Menu</a>
+                    <a href="#find-us" class="hover:text-gray-500 transition">Find Us</a>
+                    <a href="#events" class="hover:text-gray-500 transition">Events</a>
                 </div>
 
                 <!-- Center: Logo -->
-                <div class="flex justify-center">
-                    <a href="#home">
+                <div class="hidden md:block flex justify-center">
+                    <a href="#home" class="text-pink-600 font-bold text-center flex justify-center">
                         <img src="images/logo.png" alt="Lolo's Ice Cream Logo"
                             class="h-16 md:h-20 hover:scale-105 transition-transform">
                     </a>
@@ -117,12 +117,12 @@
                     <img src="images/rolling-process.jpg" alt="Rolling Ice Cream Process"
                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 md:border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform object-cover">
                     <img src="images/store-interior.jpg" alt="Store Interior"
-                        class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-4 md:border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform object-cover">
+                        class="hidden md:block w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-4 md:border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform object-cover">
                 </div>
 
                 <!-- Content -->
-                <div class="animate-on-scroll">
-                    <p class="text-gray-600 font-semibold uppercase mb-2 text-sm md:text-base">Made Fresh. Made Fun.</p>
+                <div class="animate-on-scroll in-view flex flex-col items-center md:items-start">
+                    <p class="text-gray-600 font-semibold uppercase mb-2 text-sm md:text-base ">Made Fresh. Made Fun.</p>
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
                         ROLLING HAPPINESS INTO EVERY CUP
                     </h2>
@@ -226,7 +226,7 @@
     <!-- Location Section -->
     <section id="find-us" class="bg-brown text-white py-16 md:py-20 lg:py-24 relative drip-border brown-drip">
         <div class="container mx-auto px-4 md:px-6">
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Location Info -->
                 <div class="animate-on-scroll">
                     <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">WHERE TO FIND US</h2>
@@ -258,7 +258,7 @@
                 </div>
 
                 <!-- Map -->
-                <div class="animate-on-scroll">
+                <div class="animate-on-scrol w-full">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2909.8857248879985!2d-94.77973786249038!3d36.205276866426765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1759338170742!5m2!1sen!2sus"
                         width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen=""
