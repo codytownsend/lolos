@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Rolled Cream - Hand-rolled ice cream made fresh with love. Visit us in Kansas for a unique ice cream experience!">
-    <title>Rolled Cream - Hand-Rolled Happiness</title>
+        content="Lolo's Ice Cream - Hand-rolled ice cream made fresh with love. Visit us in Kansas for a unique ice cream experience!">
+    <title>Lolo's - Hand-Rolled Happiness</title>
 
-    <!-- For .ico file -->
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    
-    <!-- For PNG file -->
-
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,51 +30,55 @@
 
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-pink-100 px-0 py-3 sticky top-0 z-50 shadow-md">
+    <nav class="bg-pink-100 px-4 md:px-6 py-3 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto">
             <div class="grid grid-cols-3 items-center gap-4 nav-list">
                 <!-- Left: Menu Items -->
-                <div class="hidden md:flex space-x-6 text-md font-semibold uppercase justify-start">
+                <div
+                    class="hidden md:flex space-x-4 lg:space-x-6 text-sm lg:text-md font-semibold uppercase justify-start">
                     <a href="#about" class="hover:text-pink-500 transition">About</a>
                     <a href="#menu" class="hover:text-pink-500 transition">Menu</a>
                     <a href="#find-us" class="hover:text-pink-500 transition">Find Us</a>
                     <a href="#events" class="hover:text-pink-500 transition">Events</a>
                 </div>
-    
+
                 <!-- Center: Logo -->
                 <div class="flex justify-center">
                     <a href="#home">
-                        <img src="images/logo.png" alt="Rolled Cream Logo"
-                            class="h-20 hover:scale-105 transition-transform">
+                        <img src="images/logo.png" alt="Lolo's Ice Cream Logo"
+                            class="h-16 md:h-20 hover:scale-105 transition-transform">
                     </a>
                 </div>
-    
+
                 <!-- Right: Social Links -->
-                <div class="hidden md:flex items-center space-x-4 justify-end">
-                    <span class="text-md font-semibold uppercase">Follow Us</span>
-                    <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700 transition">
+                <div class="hidden md:flex items-center space-x-3 lg:space-x-4 justify-end">
+                    <span class="text-xs lg:text-md font-semibold uppercase hidden lg:inline">Follow Us</span>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+                        class="text-pink-500 hover:text-pink-700 transition">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
-                    <a href="https://facebook.com" target="_blank" class="text-pink-500 hover:text-pink-700 transition">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+                        class="text-pink-500 hover:text-pink-700 transition">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="https://tiktok.com" target="_blank" class="text-pink-500 hover:text-pink-700 transition">
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"
+                        class="text-pink-500 hover:text-pink-700 transition">
                         <i class="fab fa-tiktok text-xl"></i>
                     </a>
                 </div>
-    
+
                 <!-- Mobile: Logo and Menu Button -->
                 <div class="md:hidden col-span-3 flex justify-between items-center">
                     <a href="#home">
-                        <img src="images/logo.png" alt="Rolled Cream Logo"
-                            class="h-16 hover:scale-105 transition-transform">
+                        <img src="images/logo.png" alt="Lolo's Ice Cream Logo"
+                            class="h-14 hover:scale-105 transition-transform">
                     </a>
-                    <button id="mobile-menu-btn" class="text-pink-500">
+                    <button id="mobile-menu-btn" class="text-pink-500" aria-label="Toggle menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
-    
+
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-3 text-sm font-semibold uppercase">
@@ -85,23 +86,22 @@
                     <a href="#menu" class="hover:text-pink-500 transition">Menu</a>
                     <a href="#find-us" class="hover:text-pink-500 transition">Find Us</a>
                     <a href="#events" class="hover:text-pink-500 transition">Events</a>
-                    <a href="#gift-cards" class="hover:text-pink-500 transition">Gift Cards</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-hero py-20 relative overflow-hidden">
-        <div class="container mx-auto text-center px-6 relative z-10">
-            <div class="flex justify-center mb-8">
-                <img src="images/hero-logo.png" alt="Rolled Cream Mascot"
-                    class="hover:scale-105 transition-transform">
+    <section id="home" class="bg-hero py-16 md:py-20 lg:py-24 relative overflow-hidden">
+        <div class="container mx-auto text-center px-4 md:px-6 relative z-10">
+            <div class="flex justify-center mb-6 md:mb-8">
+                <img src="images/hero-logo.png" alt="Lolo's Ice Cream Mascot"
+                    class="max-w-full h-auto w-64 md:w-80 lg:w-96 hover:scale-105 transition-transform">
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4 animate-fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 animate-fade-in">
                 HAND-ROLLED HAPPINESS
             </h1>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8">
                 <a href="#menu" class="btn-pink inline-block">See Our Menu</a>
                 <a href="#events" class="btn-outline inline-block">Reserve Your Event</a>
             </div>
@@ -109,28 +109,28 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-pink-200 py-20 relative drip-border pink-drip">
-        <div class="container mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" class="bg-pink-200 py-16 md:py-20 lg:py-24 relative drip-border pink-drip">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Images -->
-                <div class="space-y-6 flex items-end gap-6">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
                     <img src="images/rolling-process.jpg" alt="Rolling Ice Cream Process"
-                        class="w-96 h-96 rounded-full border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform">
+                        class="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 md:border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform object-cover">
                     <img src="images/store-interior.jpg" alt="Store Interior"
-                        class="w-72 h-72 rounded-full border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform">
+                        class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-4 md:border-8 border-pink-300 shadow-2xl hover:scale-105 transition-transform object-cover">
                 </div>
 
                 <!-- Content -->
                 <div class="animate-on-scroll">
-                    <p class="text-gray-600 font-semibold uppercase mb-2">Made Fresh. Made Fun.</p>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <p class="text-gray-600 font-semibold uppercase mb-2 text-sm md:text-base">Made Fresh. Made Fun.</p>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
                         ROLLING HAPPINESS INTO EVERY CUP
                     </h2>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        At Rolled Cream, it's more than just ice cream - it's an experience. We start with fresh
+                    <p class="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
+                        At Lolo's, it's more than just ice cream - it's an experience. We start with fresh
                         ingredients, freeze 'em cold, and roll them into perfect curls that look as good as they taste.
                     </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                         Whether you're vibing solo with your fave flavor or getting creative with endless toppings, each
                         cup is crafted just for you. Come catch the show, snap a pic, and let your taste buds go wild -
                         no two visits are the same!
@@ -142,84 +142,79 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="bg-white py-24 relative">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-600 font-semibold uppercase mb-2">Crafted Fresh for Everyone</p>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+    <section id="menu" class="bg-white py-16 md:py-20 lg:py-24 relative">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <p class="text-gray-600 font-semibold uppercase mb-2 text-sm md:text-base">Crafted Fresh for Everyone</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 md:mb-4">
                 OUR SIGNATURE ROLLS
             </h2>
-            <p class="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p class="text-gray-700 max-w-3xl mx-auto mb-6 md:mb-8 leading-relaxed text-sm md:text-base px-4">
                 Our flavors are designed to impress. Each hand-rolled ice cream is made to order, with fresh ingredients
                 and customized with toppings that take it to the next level. Whether you're looking for a classic
                 favorite, something new and creative, or a flavor that's just as unique as you are, we've got you
                 covered.
             </p>
-            <a href="#" class="btn-pink inline-block mb-16">See Full Menu</a>
+            <a href="#" class="btn-pink inline-block mb-12 md:mb-16">See Full Menu</a>
 
             <!-- Ice Cream Flavors Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
 
                 <!-- Strawberry -->
                 <div class="ice-cream-card animate-on-scroll">
-                    <div
-                        class="mx-auto mb-4">
+                    <div class="mx-auto mb-4 w-full max-w-xs">
                         <img src="images/flavors/strawberry.jpg" alt="Strawberry Ice Cream"
-                            class="rounded-full w-full h-full object-cover">
+                            class="rounded-full w-full h-auto aspect-square object-cover">
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-2 text-2xl">STRAWBERRY</h3>
-                    <p class="text-sm text-gray-600 px-2">
+                    <h3 class="font-bold text-gray-800 mb-2 text-xl md:text-2xl">STRAWBERRY</h3>
+                    <p class="text-xs md:text-sm text-gray-600 px-2">
                         Strawberry base ice cream with strawberry wafer crumble and whipped cream topping
                     </p>
                 </div>
 
                 <!-- Peanut Butter Chocolate -->
                 <div class="ice-cream-card animate-on-scroll">
-                    <div
-                        class="mx-auto mb-4">
+                    <div class="mx-auto mb-4 w-full max-w-xs">
                         <img src="images/flavors/pbc.jpg" alt="Peanut Butter Chocolate"
-                            class="rounded-full w-full h-full object-cover">
+                            class="rounded-full w-full h-auto aspect-square object-cover">
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-2 text-2xl">PEANUT BUTTER CHOCOLATE</h3>
-                    <p class="text-sm text-gray-600 px-2">
+                    <h3 class="font-bold text-gray-800 mb-2 text-xl md:text-2xl">PEANUT BUTTER CHOCOLATE</h3>
+                    <p class="text-xs md:text-sm text-gray-600 px-2">
                         Rich peanut butter base with chocolate drizzle, whipped cream and peanut butter cups
                     </p>
                 </div>
 
                 <!-- Cookies & Cream -->
                 <div class="ice-cream-card animate-on-scroll">
-                    <div
-                        class="mx-auto mb-4">
+                    <div class="mx-auto mb-4 w-full max-w-xs">
                         <img src="images/flavors/cookiesandcream.jpg" alt="Cookies & Cream"
-                            class="rounded-full w-full h-full object-cover">
+                            class="rounded-full w-full h-auto aspect-square object-cover">
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-2 text-2xl">COOKIES & CREAM</h3>
-                    <p class="text-sm text-gray-600 px-2">
+                    <h3 class="font-bold text-gray-800 mb-2 text-xl md:text-2xl">COOKIES & CREAM</h3>
+                    <p class="text-xs md:text-sm text-gray-600 px-2">
                         Vanilla base loaded with crushed Oreo cookies and topped with whipped cream and more crumble
                     </p>
                 </div>
 
                 <!-- Chocolate Chip -->
                 <div class="ice-cream-card animate-on-scroll">
-                    <div
-                        class="mx-auto mb-4">
+                    <div class="mx-auto mb-4 w-full max-w-xs">
                         <img src="images/flavors/cc.jpg" alt="Chocolate Chip"
-                            class="rounded-full w-full h-full object-cover">
+                            class="rounded-full w-full h-auto aspect-square object-cover">
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-2 text-2xl">CHOCOLATE CHIP</h3>
-                    <p class="text-sm text-gray-600 px-2">
+                    <h3 class="font-bold text-gray-800 mb-2 text-xl md:text-2xl">CHOCOLATE CHIP</h3>
+                    <p class="text-xs md:text-sm text-gray-600 px-2">
                         Classic vanilla with premium chocolate chips, caramel drizzle and whipped cream
                     </p>
                 </div>
 
                 <!-- Birthday Cake -->
                 <div class="ice-cream-card animate-on-scroll">
-                    <div
-                        class="mx-auto mb-4">
+                    <div class="mx-auto mb-4 w-full max-w-xs">
                         <img src="images/flavors/birthdaycake.jpg" alt="Birthday Cake"
-                            class="rounded-full w-full h-full object-cover">
+                            class="rounded-full w-full h-auto aspect-square object-cover">
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-2 text-2xl">BIRTHDAY CAKE</h3>
-                    <p class="text-sm text-gray-600 px-2">
+                    <h3 class="font-bold text-gray-800 mb-2 text-xl md:text-2xl">BIRTHDAY CAKE</h3>
+                    <p class="text-xs md:text-sm text-gray-600 px-2">
                         Vanilla base with colorful sprinkles and topped with whipped cream.
                     </p>
                 </div>
@@ -229,33 +224,33 @@
     </section>
 
     <!-- Location Section -->
-    <section id="find-us" class="bg-brown text-white py-24 relative drip-border brown-drip">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="find-us" class="bg-brown text-white py-16 md:py-20 lg:py-24 relative drip-border brown-drip">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Location Info -->
                 <div class="animate-on-scroll">
-                    <h2 class="text-white text-4xl md:text-5xl font-bold mb-8">WHERE TO FIND US</h2>
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start space-x-4">
-                            <i class="fas fa-map-marker-alt text-pink-400 text-2xl mt-1"></i>
+                    <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">WHERE TO FIND US</h2>
+                    <div class="space-y-4 md:space-y-6 mb-6 md:mb-8">
+                        <div class="flex items-start space-x-3 md:space-x-4">
+                            <i class="fas fa-map-marker-alt text-pink-400 text-xl md:text-2xl mt-1"></i>
                             <div>
-                                <p class="font-semibold text-lg">Address</p>
-                                <p class="text-gray-200">450 US-59, Kansas, OK 74347</p>
+                                <p class="font-semibold text-base md:text-lg">Address</p>
+                                <p class="text-gray-200 text-sm md:text-base">450 US-59, Kansas, OK 74347</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-4">
-                            <i class="fas fa-clock text-pink-400 text-2xl mt-1"></i>
+                        <div class="flex items-start space-x-3 md:space-x-4">
+                            <i class="fas fa-clock text-pink-400 text-xl md:text-2xl mt-1"></i>
                             <div>
-                                <p class="font-semibold text-lg">Hours</p>
-                                <p class="text-gray-200">Monday - Thursday: 5:00 PM - 11:00 PM</p>
-                                <p class="text-gray-200">Friday - Sunday: 5:00 PM - 12:00 AM</p>
+                                <p class="font-semibold text-base md:text-lg">Hours</p>
+                                <p class="text-gray-200 text-sm md:text-base">Monday - Thursday: 5:00 PM - 11:00 PM</p>
+                                <p class="text-gray-200 text-sm md:text-base">Friday - Sunday: 5:00 PM - 12:00 AM</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-4">
-                            <i class="fas fa-phone text-pink-400 text-2xl mt-1"></i>
+                        <div class="flex items-start space-x-3 md:space-x-4">
+                            <i class="fas fa-phone text-pink-400 text-xl md:text-2xl mt-1"></i>
                             <div>
-                                <p class="font-semibold text-lg">Contact</p>
-                                <p class="text-gray-200">(555) 123-4567</p>
+                                <p class="font-semibold text-base md:text-lg">Contact</p>
+                                <p class="text-gray-200 text-sm md:text-base">(555) 123-4567</p>
                             </div>
                         </div>
                     </div>
@@ -266,8 +261,8 @@
                 <div class="animate-on-scroll">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2909.8857248879985!2d-94.77973786249038!3d36.205276866426765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1759338170742!5m2!1sen!2sus"
-                        width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen=""
-                        loading="lazy" class="shadow-2xl">
+                        width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen=""
+                        loading="lazy" class="shadow-2xl md:h-96">
                     </iframe>
                 </div>
             </div>
@@ -275,24 +270,24 @@
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="bg-white py-24 relative drip-border">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="events" class="bg-white py-16 md:py-20 lg:py-24 relative drip-border">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Event Image -->
                 <img src="images/event-space.png" alt="Event Space"
-                    class="rounded-lg shadow-xl hover:scale-105 transition-transform animate-on-scroll">
+                    class="rounded-lg shadow-xl hover:scale-105 transition-transform animate-on-scroll w-full h-auto">
 
                 <!-- Event Info -->
                 <div class="animate-on-scroll">
-                    <p class="text-gray-800 font-semibold uppercase mb-2">Events</p>
-                    <h2 class="text-gray-800 text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    <p class="text-gray-800 font-semibold uppercase mb-2 text-sm md:text-base">Events</p>
+                    <h2 class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
                         CATERING SOMETHING OR OTHER
                     </h2>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
                         At Lolo's, we're here to make your event one-of-a-kind. From birthdays and celebrations to
                         corporate gatherings and festivals, we bring joy and flavor wherever we go.
                     </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                         We roll up to festivals and bite night endings, we bring joy and flavor wherever we go.
                     </p>
                     <a href="#booking" class="btn-pink inline-block">Book Your Event</a>
@@ -302,16 +297,16 @@
     </section>
 
     <!-- Booking Form Section -->
-    <section id="booking" class="bg-pink-200 py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-12">
+    <section id="booking" class="bg-pink-200 py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-8 md:mb-12">
                 MAKE YOUR EVENT UNIQUE!
             </h2>
-            <div class="grid md:grid-cols-1 px-80">
+            <div class="max-w-2xl mx-auto">
                 <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-lg shadow-xl animate-on-scroll">
-                    <p class="text-gray-600 text-center leading-relaxed mb-6">
-                        Thinking about adding the Rolled Cream experience to your special event? We can
+                <div class="bg-white p-6 md:p-8 rounded-lg shadow-xl animate-on-scroll">
+                    <p class="text-gray-600 text-center leading-relaxed mb-6 text-sm md:text-base">
+                        Thinking about adding the Lolo's experience to your special event? We can
                         help. Tell us about your event from "Special" to "Spectacular," we'll make sure we
                         bring all the bells and whistles. And yes, that includes ice cream. We'll customize
                         everything to make your event perfect.
@@ -319,37 +314,38 @@
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <input type="text" name="name" placeholder="Name*" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition">
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base">
                         </div>
                         <div>
                             <input type="email" name="email" placeholder="Email*" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition">
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base">
                         </div>
                         <div>
                             <input type="tel" name="phone" placeholder="Phone*" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition">
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base">
                         </div>
                         <div>
                             <textarea name="message" placeholder="Tell us about your event*" rows="4" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition"></textarea>
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base"></textarea>
                         </div>
                         <div class="flex items-start space-x-2">
                             <input type="checkbox" id="scheduling" name="scheduling" class="mt-1">
-                            <label for="scheduling" class="text-sm text-gray-600">I am open to scheduling</label>
+                            <label for="scheduling" class="text-xs md:text-sm text-gray-600">I am open to
+                                scheduling</label>
                         </div>
                         <button type="submit" class="w-full btn-pink">LET'S GET ROLLING</button>
                     </form>
-                    <div id="form-message" class="hidden mt-4 p-4 rounded-lg text-center"></div>
+                    <div id="form-message" class="hidden mt-4 p-4 rounded-lg text-center text-sm md:text-base"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-4">
-        <div class="container mx-auto px-6">
+    <footer class="bg-white py-4 md:py-6">
+        <div class="container mx-auto px-4 md:px-6">
             <!-- Copyright -->
-            <p class="text-gray-600 text-xs text-center">
+            <p class="text-gray-600 text-xs md:text-sm text-center">
                 Copyright © 2025 Lolo's Ice Cream. All rights reserved.
             </p>
         </div>
