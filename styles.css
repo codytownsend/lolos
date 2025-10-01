@@ -373,6 +373,30 @@ input[type="checkbox"] {
     color: #721c24;
 }
 
+#booking {
+    position: relative;
+}
+
+#booking::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Section.png');
+    background-repeat: repeat;
+    background-size: 75%;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#booking>* {
+    position: relative;
+    z-index: 1;
+}
+
 /* ================================================
    RESPONSIVE DESIGN
    ================================================ */
