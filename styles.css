@@ -416,6 +416,12 @@ input[type="checkbox"] {
     h3 {
         font-size: 1.25rem !important;
     }
+    .bg-hero {
+        min-height: 700px;
+    }
+    #booking::before {
+        background-size: 300%
+    }
 }
 
 @media (max-width: 768px) {
