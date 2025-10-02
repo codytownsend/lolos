@@ -347,3 +347,64 @@ window.addEventListener('error', function(e) {
     console.error('An error occurred:', e.error);
     // You can send this to an error tracking service
 });
+
+// ================================================
+// CONTACT FORM HANDLING WITH WEB3FORMS
+// ================================================
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
+if (contactForm && formMessage) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'SENDING...';
+        submitBtn.disabled = true;
+        submitBtn.classList.add('loading');
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // Success
+                formMessage.classList.remove('hidden', 'form-error');
+                formMessage.classList.add('form-success');
+                formMessage.textContent = '🎉 Thank you! We\'ll get back to you soon to make your event amazing!';
+                
+                // Reset form
+                contactForm.reset();
+            } else {
+                // Error
+                formMessage.classList.remove('hidden', 'form-success');
+                formMessage.classList.add('form-error');
+                formMessage.textContent = 'Oops! Something went wrong. Please try again or email us directly.';
+            }
+        } catch (error) {
+            // Network error
+            formMessage.classList.remove('hidden', 'form-success');
+            formMessage.classList.add('form-error');
+            formMessage.textContent = 'Oops! Something went wrong. Please try again or email us directly.';
+        } finally {
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
+            
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        }
+    });
+}

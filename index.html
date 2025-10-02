@@ -51,6 +51,16 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7163CGMH8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T7163CGMH8');
+    </script>
 </head>
 
 <body class="bg-white">
@@ -128,7 +138,7 @@
             </h1>
             <div class="flex flex-col sm:flex-row justify-center mx-16 space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8">
                 <a href="#menu" class="btn-pink inline-block">See Our Menu</a>
-                <a href="#events" class="btn-outline inline-block">Reserve Your Event</a>
+                <a href="#booking" class="btn-outline inline-block">Reserve Your Event</a>
             </div>
         </div>
     </section>
@@ -256,7 +266,7 @@
             <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Location Info -->
                 <div class="animate-on-scroll">
-                    <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">WHERE TO FIND US</h2>
+                    <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">LOCATION COMING SOON</h2>
                     <div class="space-y-4 md:space-y-6 mb-6 md:mb-8">
                         <div class="flex items-start space-x-3 md:space-x-4">
                             <i class="fas fa-map-marker-alt text-pink-400 text-xl md:text-2xl mt-1"></i>
@@ -277,7 +287,7 @@
                             <i class="fas fa-phone text-pink-400 text-xl md:text-2xl mt-1"></i>
                             <div>
                                 <p class="font-semibold text-base md:text-lg">Contact</p>
-                                <p class="text-gray-200 text-sm md:text-base">(555) 123-4567</p>
+                                <p class="text-gray-200 text-sm md:text-base hover:scale-105 transition-transform"><a class="hover:scale-105 transition-transform text-white" href="tel:+9182268597">(918) 226-8597</a></p>
                             </div>
                         </div>
                     </div>
@@ -306,16 +316,16 @@
 
                 <!-- Event Info -->
                 <div class="animate-on-scroll">
-                    <p class="text-gray-800 font-semibold uppercase mb-2 text-sm md:text-base">Events</p>
+                    <p class="text-gray-800 font-semibold uppercase mb-2 text-sm md:text-base">EVENTS & CATERING</p>
                     <h2 class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-                        CATERING SOMETHING OR OTHER
+                        We Bring the Show to You
                     </h2>
                     <p class="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
-                        At Lolo's, we're here to make your event one-of-a-kind. From birthdays and celebrations to
-                        corporate gatherings and festivals, we bring joy and flavor wherever we go.
+                        At Lolo's, we're here to make your event one-of-a-kind. From birthdays and celebrations to corporate gatherings and
+                        festivals, we bring hand-rolled ice cream and unforgettable vibes straight to your event.
                     </p>
-                    <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-                        We roll up to festivals and bite night endings, we bring joy and flavor wherever we go.
+                    <p class="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
+                        Fresh ingredients, custom rolls, and happy guests guaranteed.
                     </p>
                     <a href="#booking" class="btn-pink inline-block">Book Your Event</a>
                 </div>
@@ -329,13 +339,20 @@
             <div class="max-w-2xl mx-auto">
                 <!-- Contact Form -->
                 <div class="bg-white p-6 md:p-8 rounded-lg shadow-xl animate-on-scroll">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-4 md:mb-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-4 md:mb-4">
                         MAKE YOUR EVENT UNIQUE!
                     </h2>
                     <p class="text-gray-600 text-center leading-relaxed mb-6 text-sm md:text-base">
-                        Lolo's experience can take your event from "Special" to "Spectacular." We'll customize everything to make your event perfect.
+                        Thinking about adding the Lolo's experience to your special event? We can
+                        help. Tell us about your event from "Special" to "Spectacular," we'll make sure we
+                        bring all the bells and whistles. And yes, that includes ice cream. We'll customize
+                        everything to make your event perfect.
                     </p>
-                    <form id="contact-form" class="space-y-4">
+    
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="b0418dca-6a39-4523-9bb5-8d843d6a75f5">
+                        <input type="hidden" name="subject" value="New Event Booking from Lolo's">
+    
                         <div>
                             <input type="text" name="name" placeholder="Name*" required
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base">
@@ -352,13 +369,16 @@
                             <textarea name="message" placeholder="Tell us about your event*" rows="4" required
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-200 transition text-sm md:text-base"></textarea>
                         </div>
-                        <div class="flex items-start space-x-2">
-                            <input type="checkbox" id="scheduling" name="scheduling" class="mt-1">
-                            <label for="scheduling" class="text-xs md:text-sm text-gray-600">I am open to
-                                scheduling</label>
+    
+                        <!-- Honeypot for spam protection -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="honeypot" tabindex="-1" value="">
                         </div>
+    
                         <button type="submit" class="w-full btn-pink">LET'S GET ROLLING</button>
                     </form>
+    
+                    <!-- Success/Error Message Display -->
                     <div id="form-message" class="hidden mt-4 p-4 rounded-lg text-center text-sm md:text-base"></div>
                 </div>
             </div>
